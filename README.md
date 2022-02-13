@@ -1,47 +1,29 @@
 // Java-University-Lab2
 
-import java.util.Arrays;
+public class ClassB {
 
-public class ClassA {
-	private final int SIZE_ARRAY = 5;
-	public int numItems;
-	public int[] arrItems;
+	private static int counter = 0;
 
-	public ClassA(int n, int[] arr) {
-		numItems = n;
-		arrItems = arr;
+	public ClassB() {
+		counter = 1;
 	}
 
-	public ClassA() {
-		numItems = 0;
-		arrItems = new int[SIZE_ARRAY];
+	public void incCounter() {
+		++counter;
 	}
-	/*
-	 * Add a public method equals
-	 */
-	public boolean equals (ClassA otherClass) {
-//		if (this.numItems == otherClass.numItems)				
-//			System.out.println("Yes");
-//		else {
-//			System.out.println("NO");
-//		}
-//		if (this.arrItems == null && otherClass.arrItems == null)				
-//			System.out.println("Yes");
-//		else {
-//			System.out.println("NO");
-//		}
-//		
-//		if (Arrays.equals(this.arrItems, otherClass.arrItems))				
-//			System.out.println("Yes");
-//		else {
-//			System.out.println("NO");
-//		}
+
+	public int getCounter() {
+		return counter;
+	}
+
+	public static void main(String[] args) {
+		int i;
+		ClassB c = new ClassB();
 		
-		if (this.numItems == otherClass.numItems && ((this.arrItems == null && otherClass.arrItems == null) || (Arrays.equals(this.arrItems, otherClass.arrItems))))
-		{
-			return true;
-		} else {
-			return false;
-		}
+
+		i = c.counter;
+		c.incCounter();
+		System.out.println("i = " + i + " counter = " + c.counter);
 	}
+
 }
