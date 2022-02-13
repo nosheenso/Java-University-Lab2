@@ -1,19 +1,14 @@
 // Java-University-Lab2
 
-public class ClassC {
+public class CountObjects {
 
-	private static int counter = 0;
-
-	public ClassC() {
-		this.counter ++;
-	}
-
-	public void incCounter() {
-		++counter;
-	}
-
-	public int getCounter() {
-		return counter;
+	public static void main(String[] args) {
+		int numObjects;
+		ClassC C = null;
+		for (int i = 0; i < RandomNumber.getRandomNumber(10, 20); ++i)
+			C = new ClassC();
+		numObjects = C.getCounter();
+		System.out.println("Number of objects created is " + numObjects);
 	}
 
 }
