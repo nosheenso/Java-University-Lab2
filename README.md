@@ -1,11 +1,11 @@
 // Java-University-Lab2
 
-public class ClassB {
+public class ClassC {
 
 	private static int counter = 0;
 
-	public ClassB() {
-		counter = 1;
+	public ClassC() {
+		this.counter ++;
 	}
 
 	public void incCounter() {
@@ -14,16 +14,6 @@ public class ClassB {
 
 	public int getCounter() {
 		return counter;
-	}
-
-	public static void main(String[] args) {
-		int i;
-		ClassB c = new ClassB();
-		
-
-		i = c.counter;
-		c.incCounter();
-		System.out.println("i = " + i + " counter = " + c.counter);
 	}
 
 }
